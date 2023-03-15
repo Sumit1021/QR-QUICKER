@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR-QUICKER</title>
+    <!-- Bootstap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Local files -->
+    <link rel="icon" type="image/x-icon" href="icons/fevicon.png">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Nav -->
+    <main class="navbar">
+      <div class="container-fluid justify-content-center " id="nav">
+        <span class="navbar-brand mb-0"
+          ><img class="img-fluid mt-0" src="icons/logo2.png" width="350px"
+        /></span>
+      </div>
+      
+      <!-- Main -->
+      <div class="container-fluid justify-content-center" id="main">
+        <div class="row">
+          <div class="col-4 p-3"> 
+            <input class="p-1 pl-3" type="text" placeholder="Enter URL or TEXT...." spellcheck="false" id="input">
+            <!-- SizeInput -->
+          <div class="generate d-flex justify-content-between mt-3">
+            <div class="size">
+                <label for="#floatingSelect">Select size:</label>
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect"style="width: 130px; padding: 2px; height: 30px;">
+                      <option value="250">250X250</option>
+                      <option value="200">200X200</option>
+                      <option value="150">150X150</option>
+                    </select>
+                  </div>
+               </div>
+               
+                      <!-- Submit btn -->
+                      <button type="button" class="btn btn-primary btn-sm mt-4 fw-bold" style="height: 30px;width: 130px;" onclick="genrateQR()">Generate</button>
+          </div>
+          <!-- qr-code Image-->
+         <div class="img-div" style="height: 300px; height: 100%;">
+            <img src="#" id="img">
+         </div>
+         <!-- buttons -->
+         <div class="btns d-flex justify-content-around "id="boxBtn">
+            <button type="button" class="btn btn-primary"><a href="" download="Created-by-sumit-QR-code-genrator" id="download">Download</a></button>
+            <button type="button" class="btn btn-secondary"><a href="index.html"> Reset</a></button>
+         </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- Toast -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="toast" id="toast">
+            <div class="d-flex">
+              <div class="toast-body">
+                <i class="bi bi-check-circle-fill text-success"></i> Created
+                Successfully!
+              </div>
+              <button
+                type="button"
+                class="btn-close me-2 m-auto"
+                data-bs-dismiss="toast"
+              ></button>
+            </div>
+          </div>
+          <div class="toast " id="error">
+            <div class="d-flex">
+              <div class="toast-body">
+                <i class="bi bi-exclamation-circle-fill text-warning"></i> Please Enter Something!
+              </div>
+              <button
+                type="button"
+                class="btn-close me-2 m-auto"
+                data-bs-dismiss="toast"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
